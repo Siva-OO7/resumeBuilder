@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .resume-container {
+            width: 800px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #222E46;
+            color: #BBA17F;
+            text-align: center;
+            padding: 20px;
+            text-transform: uppercase;
+        }
+
+        .header h1 {
+            font-size: 36px;
+        }
+
+        .main-content {
+            display: flex;
+            padding: 20px;
+        }
+
+        .left-column {
+            width: 40%;
+            padding-right: 20px;
+        }
+
+        .right-column {
+            width: 60%;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #222E46;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .contact p, .education ul, .skills ul {
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .contact p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            background-color: #222E46;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .education ul, .skills ul {
+            list-style-type: none;
+        }
+
+        .experience p {
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .section-divider {
+            margin-bottom: 20px;
+        }
+
+        .left-column .section-divider:last-child,
+        .right-column .section-divider:last-child {
+          margin-bottom: 0;
+        }
+
+         .contact p span:nth-child(2) {
+            word-break: break-word; /* This is the key change */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1>{{name}}</h1>
+            <p>Software Engineer</p>
+        </div>
+
+        <div class="main-content">
+            <div class="left-column">
+                <div class="contact section-divider">
+                    <h2 class="section-title">Contact</h2>
+                    <p><span class="icon">📞</span> +91 {{phone}}</p>
+                    <p><span class="icon">✉️</span> {{email}}</p>
+                    <p><span class="icon">📍</span> {{address}}</p>
+                    <p><span class="icon">🔗</span> {{portfolio}}</p>
+                </div>
+                
+                <div class="education section-divider">
+                    <h2 class="section-title">Education</h2>
+                    <ul>
+                        <li>{{qualification}}<br>University of Example<br>2018 - 2022</li>
+                    </ul>
+                </div>
+                
+                <div class="skills section-divider">
+                    <h2 class="section-title">Skills</h2>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="profile section-divider">
+                    <h2 class="section-title">Profile</h2>
+                    <p>Highly motivated Software Engineer with experience in developing web applications. Proficient in JavaScript, Python, and React. Seeking to leverage my skills to contribute to a dynamic team.</p>
+                </div>
+                
+                <div class="experience section-divider">
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p><strong>Software Developer</strong><br>Tech Solutions Inc. | City, State | 2022 - Present</p>
+                    <p>
+                        <ul>
+                            <li>Developed and maintained web applications using React and Node.js.</li>
+                            <li>Collaborated with cross-functional teams to deliver high-quality software.</li>
+                            <li>Implemented RESTful APIs for data integration.</li>
+                        </ul>
+                    </p>
+                    
+                    <p><strong>Intern Software Engineer</strong><br>Web Innovations Ltd. | City, State | 2021</p>
+                    <p>
+                        <ul>
+                            <li>Assisted in the development of front-end components using JavaScript.</li>
+                            <li>Participated in code reviews and debugging sessions.</li>
+                            <li>Contributed to the improvement of application performance.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
